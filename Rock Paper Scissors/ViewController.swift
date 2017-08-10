@@ -11,6 +11,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var mySign: String?
+    var computerSign: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,7 +27,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let resultViewController = segue.destination as! ResultViewController
         
-//        resultViewController.resultText = currentSign
+        if let mySign = mySign, let computerSign = computerSign {
+            let winner = determineWinner(me: mySign, computer: computerSign)
+            let resultText = result(winner: winner, me: mySign, computer: computerSign)
+            
+            print(resultText)
+            
+            resultViewController.resultText = resultText
+        }
+        
     }
     
     func randomSign() -> String {
@@ -63,7 +74,7 @@ class ViewController: UIViewController {
         return winner
     }
     
-    func result(winner: Int, me: String, computer: String) {
+    func result(winner: Int, me: String, computer: String) -> String {
         var winnerString = ""
         
         if (winner == 0) {
@@ -74,37 +85,33 @@ class ViewController: UIViewController {
             winnerString = "Computer Wins!!!!"
         }
         
-        let result = "me: \(me), computer: \(computer)\n\(winnerString)"
+        let result = "You: \(me), Computer: \(computer)\n\(winnerString)"
         
         print(result)
+        
+        return result
     }
     
     @IBAction func playPaper(_ sender: UIButton) {
         
-        let mySign = "✋"
-        let computerSign = randomSign()
-        let winner = determineWinner(me: mySign, computer: computerSign)
-        result(winner: winner, me: mySign, computer: computerSign)
+        mySign = "✋"
+        computerSign = randomSign()
         
         performSegue(withIdentifier: "result-view-controller", sender: self)
     }
     
     @IBAction func playRock(_ sender: Any) {
         
-        let mySign = "👊"
-        let computerSign = randomSign()
-        let winner = determineWinner(me: mySign, computer: computerSign)
-        result(winner: winner, me: mySign, computer: computerSign)
+        mySign = "👊"
+        computerSign = randomSign()
         
         performSegue(withIdentifier: "result-view-controller", sender: self)
     }
     
     @IBAction func playScissors(_ sender: Any) {
         
-        let mySign = "✌️"
-        let computerSign = randomSign()
-        let winner = determineWinner(me: mySign, computer: computerSign)
-        result(winner: winner, me: mySign, computer: computerSign)
+        mySign = "✌️"
+        computerSign = randomSign()
         
         performSegue(withIdentifier: "result-view-controller", sender: self)
     }
