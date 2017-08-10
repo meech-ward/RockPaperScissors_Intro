@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226E194D1F22CF7F0018EE45 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226E194C1F22CF7F0018EE45 /* ResultViewController.swift */; };
 		22F78C8D1F22CCA5009513A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F78C8C1F22CCA5009513A6 /* AppDelegate.swift */; };
 		22F78C8F1F22CCA5009513A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F78C8E1F22CCA5009513A6 /* ViewController.swift */; };
 		22F78C921F22CCA5009513A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F78C901F22CCA5009513A6 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		226E194C1F22CF7F0018EE45 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		22F78C891F22CCA5009513A6 /* Rock Paper Scissors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Paper Scissors.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F78C8C1F22CCA5009513A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F78C8E1F22CCA5009513A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				22F78C8C1F22CCA5009513A6 /* AppDelegate.swift */,
 				22F78C8E1F22CCA5009513A6 /* ViewController.swift */,
+				226E194C1F22CF7F0018EE45 /* ResultViewController.swift */,
 				22F78C901F22CCA5009513A6 /* Main.storyboard */,
 				22F78C931F22CCA5009513A6 /* Assets.xcassets */,
 				22F78C951F22CCA5009513A6 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 			files = (
 				22F78C8F1F22CCA5009513A6 /* ViewController.swift in Sources */,
 				22F78C8D1F22CCA5009513A6 /* AppDelegate.swift in Sources */,
+				226E194D1F22CF7F0018EE45 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +426,7 @@
 				22F78CA81F22CCA5009513A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22F78CA91F22CCA5009513A6 /* Build configuration list for PBXNativeTarget "Rock Paper ScissorsTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +435,7 @@
 				22F78CAB1F22CCA5009513A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
